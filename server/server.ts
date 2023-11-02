@@ -7,6 +7,7 @@ import compression from "compression";
 import { ErrorHandler, globalErrorHandler } from "./utils/errorHandler";
 import router from "./routes/route";
 import AppDataSource from "./config/database.config";
+import { ERROR_CODES } from "../common/statusCode";
 
 const PORT = process.env.PORT || 5000;
 
@@ -24,7 +25,7 @@ app.use(compression({ level: 6, threshold: 1000 }));
 app.use(router);
 
 app.all("*", (req: Request, _res: Response, next: NextFunction) => {
-  next(new ErrorHandler(`Route ${req.originalUrl} not found!`, 404));
+  next(new ErrorHandler(`Route ${req.originalUrl} not found!`, ERROR_CODES["NOT FOUND"]));
 });
 
 app.use(globalErrorHandler);
