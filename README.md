@@ -1,4 +1,4 @@
-## 🧑‍💻Developmemt 
+## 🧑‍💻Developmemt
 
 To improve our development process, we've set up tooling and systems. Taghash uses a client server architecture.
 
@@ -48,5 +48,8 @@ Also view the different stats derived from the census.
 
 ## 🧑‍💻 Demo
 
+## 📕 References
 
- 
+1. Official documentations
+2. Stack Overflow for fixing certain bugs
+3. Youtube tutorials to undertand typeorm since I have never worked with it before.
