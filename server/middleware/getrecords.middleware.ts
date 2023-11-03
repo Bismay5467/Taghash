@@ -5,6 +5,7 @@ import { ERROR_CODES } from "../../common/statusCode";
 
 export const validateGetRecord = [
   query("page").trim().notEmpty().isInt({ min: 1 }).toInt().escape(),
+  query("rowsPerPage").trim().notEmpty().isIn([5, 8]).escape(),
 
   checkExact([], {
     locations: ["body", "params", "query", "cookies", "headers"],
