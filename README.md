@@ -48,6 +48,10 @@ Also view the different stats derived from the census.
 
 ## 🧑‍💻 Demo
 
+
+https://github.com/Bismay5467/Taghash/assets/54050465/38518daa-9182-4010-a9bb-5070c35d9f9e
+
+
 ## 📕 References
 
 1. Official documentations
