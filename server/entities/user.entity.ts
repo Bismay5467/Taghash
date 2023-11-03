@@ -2,14 +2,14 @@ import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 import { IsDateString, IsString, Validate } from "class-validator";
 
 export enum Gender {
-  Male='male',
-  Female='female',
-  Other='other',
+  Male = "male",
+  Female = "female",
+  Other = "other",
 }
 
 export enum IsVaccinated {
-  Yes="yes",
-  No="no",
+  Yes = "yes",
+  No = "no",
 }
 
 @Entity()
@@ -27,7 +27,7 @@ export class User {
   @Column({ name: "birth_date", type: "date" })
   @IsDateString()
   @Validate((birthdate: string) => {
-    const minDate = new Date("1903-01-01");
+    const minDate = new Date("1923-01-01");
     const maxDate = new Date();
 
     if (new Date(birthdate) < minDate) {
