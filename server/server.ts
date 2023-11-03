@@ -22,10 +22,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(compression({ level: 6, threshold: 1000 }));
 
-app.use(router);
+app.use("/", router);
 
 app.all("*", (req: Request, _res: Response, next: NextFunction) => {
-  next(new ErrorHandler(`Route ${req.originalUrl} not found!`, ERROR_CODES["NOT FOUND"]));
+  next(
+    new ErrorHandler(
+      `Route ${req.originalUrl} not found!`,
+      ERROR_CODES["NOT FOUND"]
+    )
+  );
 });
 
 app.use(globalErrorHandler);
